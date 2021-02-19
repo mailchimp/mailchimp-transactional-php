@@ -1,6 +1,6 @@
 {
     "name": "mailchimp/transactional",
-    "version": "1.0.21",
+    "version": "1.0.22",
     "description": "",
     "keywords": [
         "swagger",
@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5",
+        "php": ">=7.2",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
