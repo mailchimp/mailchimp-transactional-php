@@ -145,7 +145,7 @@ class Configuration
 
             return $resp;
         } catch (RequestException $e) {
-            return $e->hasResponse() ? Psr7\str($e->getResponse()) : $e;
+            return $e->hasResponse() ? Psr7\Message::toString($e->getResponse()) : $e;
         }
     }
 }
