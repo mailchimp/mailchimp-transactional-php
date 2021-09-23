@@ -1,7 +1,7 @@
 <?php
 
 /**
- * UsersApi
+ * AllowlistsApi
  * PHP version 5
  *
  * @category Class
@@ -35,14 +35,14 @@ use MailchimpTransactional\HeaderSelector;
 use MailchimpTransactional\ObjectSerializer;
 
 /**
- * UsersApi Class Doc Comment
+ * AllowlistsApi Class Doc Comment
  *
  * @category Class
  * @package  MailchimpTransactional
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class UsersApi
+class AllowlistsApi
 {
     protected $Configuration;
 
@@ -52,35 +52,27 @@ class UsersApi
     }
 
     /**
-     * Get user info
-     * Return the information about the API-connected user.
+     * Add email to allowlist
+     * Adds an email to your email rejection allowlist. If the address is currently on your denylist, that denylist entry will be removed automatically.
      */
-    public function info($body = [])
+    public function add($body = [])
     {
-        return $this->config->post('/users/info', $body);
+        return $this->config->post('/allowlists/add', $body);
     }
     /**
-     * Ping
-     * Validate an API key and respond to a ping.
+     * Remove email from allowlist
+     * Removes an email address from the allowlist.
      */
-    public function ping($body = [])
+    public function delete($body = [])
     {
-        return $this->config->post('/users/ping', $body);
+        return $this->config->post('/allowlists/delete', $body);
     }
     /**
-     * Ping 2
-     * Validate an API key and respond to a ping (JSON parser version).
+     * List allowlisted emails
+     * Retrieves your email rejection allowlist. You can provide an email address or search prefix to limit the results. Returns up to 1000 results.
      */
-    public function ping2($body = [])
+    public function list($body = [])
     {
-        return $this->config->post('/users/ping2', $body);
-    }
-    /**
-     * List account senders
-     * Return the senders that have tried to use this account, both verified and unverified.
-     */
-    public function senders($body = [])
-    {
-        return $this->config->post('/users/senders', $body);
+        return $this->config->post('/allowlists/list', $body);
     }
 }
