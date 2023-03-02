@@ -44,7 +44,7 @@ use MailchimpTransactional\ObjectSerializer;
  */
 class WhitelistsApi
 {
-    protected $Configuration;
+    protected $config;
 
     public function __construct(Configuration $config = null)
     {
