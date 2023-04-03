@@ -46,6 +46,21 @@ class Configuration
     protected $requestClient;
     protected $defaultOutputFormat = '';
     protected $timeout = 300;
+    protected $allowlists;
+    protected $exports;
+    protected $inbound;
+    protected $ips;
+    protected $messages;
+    protected $metadata;
+    protected $rejects;
+    protected $senders;
+    protected $subaccounts;
+    protected $tags;
+    protected $templates;
+    protected $urls;
+    protected $users;
+    protected $webhooks;
+    protected $whitelists;
 
     public static $formatList = ['json', 'xml', 'php', 'yaml'];
 
