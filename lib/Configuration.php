@@ -47,6 +47,22 @@ class Configuration
     protected $defaultOutputFormat = '';
     protected $timeout = 300;
 
+    protected AllowlistsApi $allowlists;
+    protected ExportsApi $exports;
+    protected InboundApi $inbound;
+    protected IpsApi $ips;
+    protected MessagesApi $messages;
+    protected MetadataApi $metadata;
+    protected RejectsApi $rejects;
+    protected SendersApi $senders;
+    protected SubaccountsApi $subaccounts;
+    protected TagsApi $tags;
+    protected TemplatesApi $templates;
+    protected UrlsApi $urls;
+    protected UsersApi $users;
+    protected WebhooksApi $webhooks;
+    protected WhitelistsApi $whitelists;
+
     public static $formatList = ['json', 'xml', 'php', 'yaml'];
 
     public function __construct()
