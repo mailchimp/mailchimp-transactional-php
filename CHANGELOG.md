@@ -2,6 +2,9 @@
 
 ## Transactional
 
+### 1.0.51
+* Fix compatible with php 8.2
+
 ### 1.0.50
 * Added a response parameter to /messages/send and /messages/send-template called 'queued_response' that details why an email was queued.
 

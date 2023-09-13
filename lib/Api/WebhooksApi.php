@@ -44,7 +44,7 @@ use MailchimpTransactional\ObjectSerializer;
  */
 class WebhooksApi
 {
-    protected $Configuration;
+    protected $config;
 
     public function __construct(Configuration $config = null)
     {
