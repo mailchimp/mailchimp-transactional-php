@@ -50,7 +50,7 @@ class Configuration
     protected $exports;
     protected $inbound;
     protected $ips;
-    protected $messages;
+    public $messages;
     protected $metadata;
     protected $rejects;
     protected $senders;
