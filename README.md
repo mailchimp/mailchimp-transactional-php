@@ -19,7 +19,7 @@ Or add the following to `composer.json`
 ```
 {
   "require": {
-    "mailchimp/transactional": "*"
+    "mailchimp/transactional": "^1.0"
   }
 }
 ```
