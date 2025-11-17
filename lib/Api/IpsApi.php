@@ -46,7 +46,7 @@ class IpsApi
 {
     protected $config;
 
-    public function __construct(Configuration $config = null)
+    public function __construct(?Configuration $config = null)
     {
         $this->config = $config ?: new Configuration();
     }
