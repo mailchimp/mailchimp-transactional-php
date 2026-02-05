@@ -1,6 +1,6 @@
 {
     "name": "mailchimp/transactional",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "description": "",
     "keywords": [
         "swagger",
@@ -24,7 +24,7 @@
         "guzzlehttp/guzzle": "^6.4 || ^7.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7",
+        "phpunit/phpunit": "^8",
         "squizlabs/php_codesniffer": "~2.6",
         "friendsofphp/php-cs-fixer": "~2.12"
     },

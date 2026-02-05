@@ -1,7 +1,7 @@
 <?php
 
 /**
- * MetadataApi
+ * MctemplatesApi
  * PHP version 5
  *
  * @category Class
@@ -35,14 +35,14 @@ use MailchimpTransactional\HeaderSelector;
 use MailchimpTransactional\ObjectSerializer;
 
 /**
- * MetadataApi Class Doc Comment
+ * MctemplatesApi Class Doc Comment
  *
  * @category Class
  * @package  MailchimpTransactional
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MetadataApi
+class MctemplatesApi
 {
     protected $config;
 
@@ -52,35 +52,35 @@ class MetadataApi
     }
 
     /**
-     * Add metadata field
-     * Add a new custom metadata field to be indexed for the account.
+     * Get Mailchimp Template info
+     * Get information about a Mailchimp Transactional template in your account.
      */
-    public function add($body = [])
+    public function mcTemplatesInfo($body = [])
     {
-        return $this->config->post('/metadata/add', $body);
+        return $this->config->post('/mctemplates/info', $body);
     }
     /**
-     * Delete metadata field
-     * Delete an existing custom metadata field. Deletion isn&#39;t instataneous, and /metadata/list will continue to return the field until the asynchronous deletion process is complete.
+     * List Mailchimp Transactional Templates
+     * Return a list of all Mailchimp Transactional templates available to this user.
      */
-    public function delete($body = [])
+    public function mcTemplatesList($body = [])
     {
-        return $this->config->post('/metadata/delete', $body);
+        return $this->config->post('/mctemplates/list', $body);
     }
     /**
-     * List metadata fields
-     * Get the list of custom metadata fields indexed for the account.
+     * Render Mailchimp Transactional Template
+     * Render a Mailchimp Transactional template with optional merge variables.
      */
-    public function list($body = [])
+    public function mcTemplatesRender($body = [])
     {
-        return $this->config->post('/metadata/list', $body);
+        return $this->config->post('/mctemplates/render', $body);
     }
     /**
-     * Update metadata field
-     * Update an existing custom metadata field.
+     * Get Mailchimp Transactional Template Time Series
+     * Return the recent history (hourly stats for the last 30 days) for a Mailchimp Transactional template. Returns an empty array if the template exists but has never been used to send messages.
      */
-    public function update($body = [])
+    public function mcTemplatesTimeSeries($body = [])
     {
-        return $this->config->post('/metadata/update', $body);
+        return $this->config->post('/mctemplates/time-series', $body);
     }
 }
